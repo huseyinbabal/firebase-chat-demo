@@ -1,0 +1,14 @@
+<div class="row">
+  <textarea name="chatContent" ng-model="chat.message" id="chatContent" cols="30" rows="10">
+
+  </textarea>
+</div>
+<div class="row">
+  <input type="button" value="Gönder" ng-click="chat.send()"/>
+</div>
+
+<div class="list">
+  <ul>
+    <li ng-repeat="message in chat.messages">{{message.message}} <input type="button" value="delete" ng-click="chat.remove(message)"/></li>
+  </ul>
+</div>
